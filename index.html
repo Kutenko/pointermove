@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+<head>
+  <title>Canvas Follow Mouse</title>
+    <script src="mousemove.js"></script>
+    <style>
+        .cursor{
+            width: 30px;
+            height: 30px;
+            position:relative;
+            margin-top:-25px;
+            margin-left:-25px;
+            border:1px solid #1f1f1f;
+            border-radius:150px;
+            transition: ease-out 0.2s;
+            pointer-events: none;
+        }
+        .cursor.click{
+           /* animation: click 0.5s;      */
+        }
+        .cursor::before{
+            content: '';
+            display: block;
+            border-radius: 150px;
+            width: 10px;
+            height: 10px;
+            background: #1f1f1f;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .cursor.click::before{
+           animation: click 0.5s;     
+        }
+        @keyframes click{
+            0%{
+                width: 10px;
+                height: 10px;              
+            }
+            50%{
+                width: 100%;
+                height: 100%;   
+                top: 0;
+                left: 0;                     
+            } 
+            100%{
+                width: 10px;
+                height: 10px
+                top: inset;
+                left: inset;                 
+            }           
+        }
+
+	
+    </style>
+</head> 
+<body>
+    <body>
+        <div class="cursor" id="cursor"></div>
+        <input type="text">
+    </body>
+</body> 
+</html>
