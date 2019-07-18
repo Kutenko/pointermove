@@ -18,15 +18,9 @@ window.addEventListener('load', function () {
     
     window.addEventListener('mousedown', function() {
         cursor.classList.add('click')
-            // setTimeout (function(){
-            //     cursor.classList.remove('click');
-            // }, 500);
     });
     window.addEventListener('mouseup', function() {
         cursor.classList.remove('click')
-            // setTimeout (function(){
-            //     cursor.classList.remove('click');
-            // }, 500);
     });    
 });
 
