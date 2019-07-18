@@ -16,12 +16,17 @@ window.addEventListener('load', function () {
     }
     move();
     
-    window.addEventListener('click', function() {
-        cursor.classList.toggle('click'),
-            setTimeout (function(){
-                cursor.classList.remove('click');
-            }, 500);
+    window.addEventListener('mousedown', function() {
+        cursor.classList.add('click')
+            // setTimeout (function(){
+            //     cursor.classList.remove('click');
+            // }, 500);
     });
-    
+    window.addEventListener('mouseup', function() {
+        cursor.classList.remove('click')
+            // setTimeout (function(){
+            //     cursor.classList.remove('click');
+            // }, 500);
+    });    
 });
 
